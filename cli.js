@@ -14,11 +14,10 @@ var opts = yargs
   .option('d', {
     alias: 'database_url',
     type: 'string',
-    default: process.env.DATABASE_URL,
-    describe: 'database url (defaults to $DATABASE_URL)'
+    describe: 'database url (overriden by $DATABASE_URL)'
   })
   .help('h')
   .alias('h', 'help')
   .argv;
 
-assertSchema(opts.database_url, opts._[0]);
+assertSchema(process.env.DATABASE_URL || opts.database_url, opts._[0]);
