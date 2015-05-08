@@ -1,0 +1,29 @@
+{
+  "name": "pg-assert-schema",
+  "version": "1.0.0",
+  "description": "CLI for asserting the existence of a postgres schema",
+  "bin": {
+    "pg-assert-schema": "cli.js"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/apechimp/node-pg-assert-schema",
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore .",
+    "test": "npm run lint"
+  },
+  "keywords": [
+    "postgres",
+    "schema",
+    "cli"
+  ],
+  "author": "Mike Atkins",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^4.3.0",
+    "sprintf-js": "^1.0.2",
+    "yargs": "^3.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^0.20.0"
+  }
+}
