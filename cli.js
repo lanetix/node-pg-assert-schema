@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-'use strict';
+'use strict'
 
-var assertSchema = require('./index');
-var yargs = require('yargs');
+const assertSchema = require('./index')
+const yargs = require('yargs')
 
-var opts = yargs
+const opts = yargs
   .demand(1)
   .usage(
     'Usage: $0 [ -d database url ] <schema>\n' +
@@ -18,6 +18,6 @@ var opts = yargs
   })
   .help('h')
   .alias('h', 'help')
-  .argv;
+  .argv
 
-assertSchema(process.env.DATABASE_URL || opts.database_url, opts._[0]);
+assertSchema(process.env.DATABASE_URL || opts.database_url, opts._[0])

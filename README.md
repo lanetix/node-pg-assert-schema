@@ -1,4 +1,4 @@
-pg-assert-schema
+@lanetix/pg-assert-schema
 =====================
 CLI for asserting the existence of a postgres schema
 
@@ -6,14 +6,14 @@ Installation
 ------------
 
 ```bash
-npm install pg-assert-schema
+npm install @lanetix/pg-assert-schema
 ```
 
 Usage
 -----
 
 ```
-Usage: pg-assert-schema [ -d database url ] <schema>
+Usage: @lanetix/pg-assert-schema [ -d database url ] <schema>
 Asserts the existence of schema, creating it if necessary
 
 Options:

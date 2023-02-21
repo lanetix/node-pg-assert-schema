@@ -1,29 +1,27 @@
 {
-  "name": "pg-assert-schema",
-  "version": "2.0.0",
+  "name": "@lanetix/pg-assert-schema",
+  "version": "1.0.0",
   "description": "CLI for asserting the existence of a postgres schema",
   "bin": {
     "pg-assert-schema": "cli.js"
   },
   "main": "index.js",
-  "repository": "https://github.com/apechimp/node-pg-assert-schema",
+  "repository": "https://github.com/lanetix/node-pg-assert-schema.git",
   "scripts": {
-    "lint": "eslint --ignore-path .gitignore .",
-    "test": "npm run lint"
+    "lint": "standard"
   },
   "keywords": [
     "postgres",
     "schema",
     "cli"
   ],
-  "author": "Mike Atkins",
-  "license": "MIT",
+  "author": "Lanetix",
+  "license": "UNLICENSED",
   "dependencies": {
-    "pg": "^4.3.0",
-    "sprintf-js": "^1.0.2",
-    "yargs": "^3.8.0"
+    "pg": "8.9.0",
+    "yargs": "17.7.0"
   },
   "devDependencies": {
-    "eslint": "^0.20.0"
+    "standard": "17.0.0"
   }
 }
