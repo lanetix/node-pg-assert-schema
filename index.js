@@ -1,23 +1,13 @@
-'use strict';
+'use strict'
 
-var pg = require('pg');
-var sprintf = require('sprintf-js').sprintf;
+const { Pool } = require('pg')
 
-module.exports = function (databaseUrl, schema) {
-  pg.connect(databaseUrl, function (err, client, done) {
-    if (err) {
-      done();
-      process.emit('error', err);
-    }
-    else {
-      client.query(
-        sprintf('CREATE SCHEMA IF NOT EXISTS "%s"', schema),
-        function (e) {
-          done();
-          if (e) { process.emit('error', e); }
-          pg.end();
-        }
-      );
-    }
-  });
-};
+module.exports = function (connectionString, schema) {
+  const pool = new Pool({
+    connectionString
+  })
+  pool.query(`CREATE SCHEMA IF NOT EXISTS ${schema}`, (err, res) => {
+    if (err) { process.emit('error', err) }
+    pool.end()
+  })
+}
