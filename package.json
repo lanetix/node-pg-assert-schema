@@ -8,7 +8,10 @@
   "main": "index.js",
   "repository": "https://github.com/lanetix/node-pg-assert-schema.git",
   "scripts": {
-    "lint": "standard"
+    "lint": "standard",
+    "check-for-update": "ncu",
+    "update-package": "ncu -u && npm install",
+    "prepare": "husky install"
   },
   "keywords": [
     "postgres",
@@ -22,6 +25,8 @@
     "yargs": "17.7.0"
   },
   "devDependencies": {
+    "husky": "8.0.3",
+    "npm-check-updates": "16.10.15",
     "standard": "17.0.0"
   }
 }
